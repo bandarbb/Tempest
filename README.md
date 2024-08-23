@@ -1,4 +1,4 @@
-Tempest Incident
+<h3>Tempest Incident</h3>
 
 In this incident, you will act as an Incident Responder from an alert triaged by one of your Security Operations Center analysts. The analyst has confirmed that the alert has a **CRITICAL** severity that needs further investigation.
 
@@ -89,7 +89,7 @@ ANS: 2022-30190
 
 -------
 
-Initial Access - Stage 2 execution
+<h3>Initial Access - Stage 2 execution</h3>
 
 Malicious Document - Stage 2
 
@@ -163,7 +163,7 @@ ANS: resolvecyber.xyz:8080
 -------
 
 
-Initial Access - Malicious Document Traffic
+<h3>Initial Access - Malicious Document Traffic</h3>
 
 Malicious Document Traffic
 
@@ -237,7 +237,7 @@ ANS:nim
 
 -------
 
-Discovery - Internal Reconnaissance
+<h3>Discovery - Internal Reconnaissance</h3>
 
 Internal Reconnaissance
 
@@ -332,7 +332,7 @@ ANS: winrm
 
 -------
 
-Privilege Escalation - Exploiting Privileges
+<h3>Privilege Escalation - Exploiting Privileges</h3>
 
 Privilege Escalation
 
@@ -395,7 +395,7 @@ ANS:8080
 
 -------
 
-Actions on Objective - Fully-owned Machine
+<h3>Actions on Objective - Fully-owned Machine</h3>
 
 Fully-Owned Machine
 
