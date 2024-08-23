@@ -22,6 +22,7 @@ Significant Data Sources:
 
 - <span style="color: #d4d0ca;">Sysmon</span>
 
+Answer the questions below
 
 Q1: The user of this machine was compromised by a malicious document. What is the file name of the document?
 
@@ -86,9 +87,9 @@ Study the payload for a bit and after a bit of googling, we'll find this page: h
 
 ANS: 2022-30190
 
-=================================================
+-------
 
-<span style="color: #ff5965;">Task 5</span><span style="color: #e5e3df;">Initial Access - Stage 2 execution</span>
+Initial Access - Stage 2 execution
 
 Malicious Document - Stage 2
 
@@ -159,10 +160,10 @@ We'll also notice that the IP resolve to this:
 
 ANS: resolvecyber.xyz:8080
 
-=========================================================
+-------
 
 
-<span style="color: #ff5965;">Task 6</span><span style="color: #e5e3df;">Initial Access - Malicious Document Traffic</span>
+Initial Access - Malicious Document Traffic
 
 Malicious Document Traffic
 
@@ -234,9 +235,9 @@ For this, we will be adding another column to our filter called "user_agent"
 
 ANS:nim
 
-===========================================
+-------
 
-<span style="color: #ff5965;">Task 7</span><span style="color: #e5e3df;">Discovery - Internal Reconnaissance</span>
+Discovery - Internal Reconnaissance
 
 Internal Reconnaissance
 
@@ -329,9 +330,9 @@ This coincides with the answer for an exploitable port that we found earlier.
 
 ANS: winrm
 
-================================================
+-------
 
-<span style="color: #ff5965;">Task 8</span><span style="color: #e5e3df;">Privilege Escalation - Exploiting Privileges</span>
+Privilege Escalation - Exploiting Privileges
 
 Privilege Escalation
 
@@ -392,9 +393,9 @@ Let's go back to the Brim result and remove our port filter.
 
 ANS:8080
 
-=============================================
+-------
 
-<span style="color: #ff5965;">Task 9</span><span style="color: #e5e3df;">Actions on Objective - Fully-owned Machine</span>
+Actions on Objective - Fully-owned Machine
 
 Fully-Owned Machine
 
