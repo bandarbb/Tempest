@@ -30,7 +30,7 @@ Open the Timeline Explorer and open the sysmon.csv that we parsed earlier in the
 
 We have two clues from the alert generated so we can either use ".doc" or "chrome.exe" at the search bar on the top right.
 
-<p align="center">![image](https://github.com/user-attachments/assets/17fc0972-bf5c-453e-a0a2-c9c45b54d531)</p>
+<p align="center"> ![image](https://github.com/user-attachments/assets/17fc0972-bf5c-453e-a0a2-c9c45b54d531)</p>
 
 ANS: free_magicules.doc
 
