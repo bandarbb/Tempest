@@ -440,24 +440,25 @@ ANS: shion,shuna
 
 Prior to the successful creation of the accounts, the attacker executed commands that failed in the creation attempt. What is the missing option that made the attempt fail?
 
-ANS:
+ANS: /add
 
 Based on windows event logs, the accounts were successfully created. What is the event ID that indicates the account creation activity?
 
-ANS:
+ANS: 4720
 
 The attacker added one of the accounts in the local administrator's group. What is the command used by the attacker?
 
-ANS:
+ANS: net localgroup administrators /add shion
 
 Based on windows event logs, the account was successfully added to a sensitive group. What is the event ID that indicates the addition to a sensitive local group?
 
-ANS:
+ANS: 4732
 
 After the account creation, the attacker executed a technique to establish persistent administrative access. What is the command executed by the attacker to achieve this?
 
 *Format: Remove the double quotes from the log.*
 
-ANS:
+ANS: C:\Windows\system32\sc.exe \\TEMPEST create TempestUpdate2 binpath= C:\ProgramData\final.exe start= auto
 
-&nbsp;
+![image](https://github.com/user-attachments/assets/08f6e299-f747-4196-bd1d-6e2fdbf3e843)
+
