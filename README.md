@@ -1,4 +1,4 @@
-<p align="center"><h3>Tempest Incident</h3></p>
+<h3>Tempest Incident</h3>
 
 In this incident, you will act as an Incident Responder from an alert triaged by one of your Security Operations Center analysts. The analyst has confirmed that the alert has a **CRITICAL** severity that needs further investigation.
 
@@ -22,15 +22,15 @@ Significant Data Sources:
 
 - <span style="color: #d4d0ca;">Sysmon</span>
 
-<p align="center">Answer the questions below
+<p align="center">Answer the questions below</p>
 
-<p align="center">Q1: The user of this machine was compromised by a malicious document. What is the file name of the document?
+<p align="center">Q1: The user of this machine was compromised by a malicious document. What is the file name of the document?</p>
 
 Open the Timeline Explorer and open the sysmon.csv that we parsed earlier in the room.
 
 We have two clues from the alert generated so we can either use ".doc" or "chrome.exe" at the search bar on the top right.
 
-<p align="center">![image](https://github.com/user-attachments/assets/17fc0972-bf5c-453e-a0a2-c9c45b54d531)
+<p align="center">![image](https://github.com/user-attachments/assets/17fc0972-bf5c-453e-a0a2-c9c45b54d531)</p>
 
 ANS: free_magicules.doc
 
